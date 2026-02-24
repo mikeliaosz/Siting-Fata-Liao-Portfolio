@@ -5,15 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FATA — Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .lang-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,.3);
+      color: #e8e2d9;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+      margin-left: 12px;
+    }
+    .lang-toggle:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.6);
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap inner">
       <a class="brand" href="index.html">FATA</a>
       <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a href="#projects" data-en="Projects" data-zh="作品">Projects</a>
+        <a href="#about" data-en="About" data-zh="关于">About</a>
+        <a href="#contact" class="cta" data-en="Contact" data-zh="联系">Contact</a>
+        <button class="lang-toggle" id="langBtn">中文</button>
       </nav>
     </div>
   </header>
@@ -24,86 +44,86 @@
         <img src='page_06.jpg' alt='Hero'>
       </div>
       <div class="wrap hero-content">
-        <div class="kicker">Fashion Design Portfolio</div>
+        <div class="kicker" data-en="Fashion Design Portfolio" data-zh="时装设计作品集">Fashion Design Portfolio</div>
         <h1 class="h1">FATA</h1>
-        <p class="sub">A fashion design practice rooted in memory and migration—combining draping, structure, embroidery, and textile development to build emotional worlds.</p>
+        <p class="sub" data-en="A fashion design practice rooted in memory and migration—combining draping, structure, embroidery, and textile development to build emotional worlds." data-zh="一个植根于记忆与迁徙的时装设计实践——融合立裁、结构、刺绣与面料开发，构建情感世界。">A fashion design practice rooted in memory and migration—combining draping, structure, embroidery, and textile development to build emotional worlds.</p>
         <div class="hero-meta">
           <span class="pill">Chicago / China</span>
-          <span class="pill">Collection · Textile · Illustration</span>
-          <a class="pill" href="#projects">View Projects ↓</a>
+          <span class="pill" data-en="Collection · Textile · Illustration" data-zh="系列 · 面料 · 插画">Collection · Textile · Illustration</span>
+          <a class="pill" href="#projects" data-en="View Projects ↓" data-zh="查看作品 ↓">View Projects ↓</a>
         </div>
       </div>
     </section>
 
     <section id="projects" class="section">
       <div class="wrap">
-        <h2 class="h2">Projects</h2>
-        <p class="note">Runway-first navigation. Swipe horizontally like a lookbook. Click any project to enter the full editorial page.</p>
+        <h2 class="h2" data-en="Projects" data-zh="作品">Projects</h2>
+        <p class="note" data-en="Runway-first navigation. Swipe horizontally like a lookbook. Click any project to enter the full editorial page." data-zh="横向滑动如同翻阅lookbook，点击任意作品进入完整展示页。">Runway-first navigation. Swipe horizontally like a lookbook. Click any project to enter the full editorial page.</p>
         <div class="hr"></div>
 
         <div class="rail" aria-label="Projects rail">
-          
-      <a class="card" href="tranquil-night.html">
-        <div class="card-media"><img src="page_02.jpg" alt="A Tranquil Night"></div>
-        <div class="card-body">
-          <h3 class="card-title">A Tranquil Night</h3>
-          <p class="card-sub">静夜思 · 2025</p>
-          <div class="card-tags"><span class="tag">Collection</span><span class="tag">Draping</span><span class="tag">Structure</span><span class="tag">Embroidery</span></div>
-        </div>
-      </a>
-    
-      <a class="card" href="socotra.html">
-        <div class="card-media"><img src="page_07.jpg" alt="An Invitation From Socotra Island"></div>
-        <div class="card-body">
-          <h3 class="card-title">An Invitation From Socotra Island</h3>
-          <p class="card-sub">一封来自索科拉岛的晚宴邀请 · 2024</p>
-          <div class="card-tags"><span class="tag">Mini Project</span><span class="tag">Moodboard</span><span class="tag">Fabric Manipulation</span><span class="tag">Concept Worldbuilding</span></div>
-        </div>
-      </a>
-    
-      <a class="card" href="illustration.html">
-        <div class="card-media"><img src="page_09.jpg" alt="Illustration Work"></div>
-        <div class="card-body">
-          <h3 class="card-title">Illustration Work</h3>
-          <p class="card-sub">插画作品 · 2023–2025</p>
-          <div class="card-tags"><span class="tag">Fashion Illustration</span><span class="tag">Character</span><span class="tag">Color Studies</span></div>
-        </div>
-      </a>
-    
-      <a class="card" href="fabric.html">
-        <div class="card-media"><img src="page_10.jpg" alt="Fabric Design Project"></div>
-        <div class="card-body">
-          <h3 class="card-title">Fabric Design Project</h3>
-          <p class="card-sub">面料设计项目 · 2023–2025</p>
-          <div class="card-tags"><span class="tag">Embroidery</span><span class="tag">Quilting</span><span class="tag">Surface Design</span></div>
-        </div>
-      </a>
-    
+
+          <a class="card" href="tranquil-night.html">
+            <div class="card-media"><img src="page_02.jpg" alt="A Tranquil Night"></div>
+            <div class="card-body">
+              <h3 class="card-title">A Tranquil Night</h3>
+              <p class="card-sub">静夜思 · 2025</p>
+              <div class="card-tags"><span class="tag" data-en="Collection" data-zh="系列">Collection</span><span class="tag" data-en="Draping" data-zh="立裁">Draping</span><span class="tag" data-en="Structure" data-zh="结构">Structure</span><span class="tag" data-en="Embroidery" data-zh="刺绣">Embroidery</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="socotra.html">
+            <div class="card-media"><img src="page_07.jpg" alt="An Invitation From Socotra Island"></div>
+            <div class="card-body">
+              <h3 class="card-title">An Invitation From Socotra Island</h3>
+              <p class="card-sub">一封来自索科拉岛的晚宴邀请 · 2024</p>
+              <div class="card-tags"><span class="tag" data-en="Mini Project" data-zh="小项目">Mini Project</span><span class="tag" data-en="Moodboard" data-zh="情绪板">Moodboard</span><span class="tag" data-en="Fabric Manipulation" data-zh="面料改造">Fabric Manipulation</span><span class="tag" data-en="Concept Worldbuilding" data-zh="概念构建">Concept Worldbuilding</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="illustration.html">
+            <div class="card-media"><img src="page_09.jpg" alt="Illustration Work"></div>
+            <div class="card-body">
+              <h3 class="card-title" data-en="Illustration Work" data-zh="插画作品">Illustration Work</h3>
+              <p class="card-sub">插画作品 · 2023–2025</p>
+              <div class="card-tags"><span class="tag" data-en="Fashion Illustration" data-zh="时装插画">Fashion Illustration</span><span class="tag" data-en="Character" data-zh="人物">Character</span><span class="tag" data-en="Color Studies" data-zh="色彩研究">Color Studies</span></div>
+            </div>
+          </a>
+
+          <a class="card" href="fabric.html">
+            <div class="card-media"><img src="page_10.jpg" alt="Fabric Design Project"></div>
+            <div class="card-body">
+              <h3 class="card-title" data-en="Fabric Design Project" data-zh="面料设计项目">Fabric Design Project</h3>
+              <p class="card-sub">面料设计项目 · 2023–2025</p>
+              <div class="card-tags"><span class="tag" data-en="Embroidery" data-zh="刺绣">Embroidery</span><span class="tag" data-en="Quilting" data-zh="绗缝">Quilting</span><span class="tag" data-en="Surface Design" data-zh="表面设计">Surface Design</span></div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="wrap">
-        <h2 class="h2">About</h2>
+        <h2 class="h2" data-en="About" data-zh="关于">About</h2>
         <div class="hr"></div>
         <div style="height:18px"></div>
         <div class="grid">
           <div class="panel">
-            <h3>Statement</h3>
+            <h3 data-en="Statement" data-zh="艺术家陈述">Statement</h3>
             <p>Liao Fata is a fashion design student based between China and Chicago. Her work explores memory, distance, and emotional connection through garments and crafted surfaces.
 <br><br>
 Working across draping, structure development, embroidery, fabric manipulation, and illustration, she treats clothing as a vessel for storytelling—where personal cultural symbols meet contemporary silhouettes.
 <br><br>
 Her collection <em>A Tranquil Night</em> (静夜思) draws from lunar imagery and homesickness, translating the quiet intimacy of longing into tactile form.
-</p>
+            </p>
           </div>
           <div class="panel" id="contact">
-            <h3>Contact</h3>
+            <h3 data-en="Contact" data-zh="联系方式">Contact</h3>
             <div class="list">
-              <a href="mailto:sitong.liao030218@gmail.com"><span>Email</span><span>→</span></a>
+              <a href="mailto:sitong.liao030218@gmail.com"><span data-en="Email" data-zh="邮箱">Email</span><span>→</span></a>
               <a href="https://www.instagram.com/fataliao218" target="_blank"><span>Instagram</span><span>→</span></a>
-              <a href="resume.html"><span>Resume</span><span>→</span></a>
+              <a href="resume.html"><span data-en="Resume" data-zh="简历">Resume</span><span>→</span></a>
             </div>
           </div>
         </div>
@@ -116,5 +136,16 @@ Her collection <em>A Tranquil Night</em> (静夜思) draws from lunar imagery an
   </main>
 
   <script src="main.js"></script>
+  <script>
+    const btn = document.getElementById('langBtn');
+    let isZh = false;
+    btn.addEventListener('click', () => {
+      isZh = !isZh;
+      btn.textContent = isZh ? 'EN' : '中文';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = isZh ? el.dataset.zh : el.dataset.en;
+      });
+    });
+  </script>
 </body>
 </html>
