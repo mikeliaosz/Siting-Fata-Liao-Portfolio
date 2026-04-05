@@ -28,28 +28,8 @@
     <section class="section" style="padding-top:40px">
       <h2 class="h2">Editorial Pages</h2>
       <p class="note">Click any image to view full screen. Use ← → to navigate.</p>
-      <div class="gallery">
-        
-        <div class="gi" data-full="page_02.jpg">
-          <img src="page_02.jpg" alt="A Tranquil Night page 2">
-        </div>
-        
-        <div class="gi" data-full="page_03.jpg">
-          <img src="page_03.jpg" alt="A Tranquil Night page 3">
-        </div>
-        
-        <div class="gi" data-full="page_04.jpg">
-          <img src="page_04.jpg" alt="A Tranquil Night page 4">
-        </div>
-        
-        <div class="gi" data-full="page_05.jpg">
-          <img src="page_05.jpg" alt="A Tranquil Night page 5">
-        </div>
-        
-        <div class="gi" data-full="page_06.jpg">
-          <img src="page_06.jpg" alt="A Tranquil Night page 6">
-        </div>
-        
+      <div class="gallery" id="gallery">
+        <!-- images injected by script -->
       </div>
     </section>
   </main>
@@ -66,6 +46,28 @@
       <div class="lb-img"><img alt="Full image"></div>
     </div>
   </div>
+  <script>
+    const isEn = new URLSearchParams(location.search).get('lang') === 'en';
+    const images = isEn
+      ? [
+          { src: 'en_01.jpg', alt: 'A Tranquil Night — concept' },
+          { src: 'en_02.jpg', alt: 'A Tranquil Night — collection look' },
+          { src: 'en_03.jpg', alt: 'A Tranquil Night — draping + structure' },
+          { src: 'en_04.jpg', alt: 'A Tranquil Night — fabric + embroidery' },
+          { src: 'en_05.jpg', alt: 'A Tranquil Night — final look' },
+        ]
+      : [
+          { src: 'page_02.jpg', alt: 'A Tranquil Night page 2' },
+          { src: 'page_03.jpg', alt: 'A Tranquil Night page 3' },
+          { src: 'page_04.jpg', alt: 'A Tranquil Night page 4' },
+          { src: 'page_05.jpg', alt: 'A Tranquil Night page 5' },
+          { src: 'page_06.jpg', alt: 'A Tranquil Night page 6' },
+        ];
+    const gallery = document.getElementById('gallery');
+    images.forEach(({ src, alt }) => {
+      gallery.innerHTML += `<div class="gi" data-full="${src}"><img src="${src}" alt="${alt}"></div>`;
+    });
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
