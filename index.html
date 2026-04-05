@@ -182,11 +182,24 @@ Through her work, Liao seeks to create garments that communicate quietly yet dee
   <script>
     const btn = document.getElementById('langBtn');
     let isZh = false;
+
+    const projectLinks = {
+      'tranquil-night.html': document.querySelector('a[href="tranquil-night.html"]'),
+      'socotra.html': document.querySelector('a[href="socotra.html"]'),
+      'illustration.html': document.querySelector('a[href="illustration.html"]'),
+      'fabric.html': document.querySelector('a[href="fabric.html"]'),
+    };
+
     btn.addEventListener('click', () => {
       isZh = !isZh;
       btn.textContent = isZh ? 'EN' : '中文';
       document.querySelectorAll('[data-en]').forEach(el => {
         el.textContent = isZh ? el.dataset.zh : el.dataset.en;
+      });
+      // update project card links
+      Object.entries(projectLinks).forEach(([base, el]) => {
+        if (!el) return;
+        el.href = isZh ? base : base + '?lang=en';
       });
     });
   </script>
